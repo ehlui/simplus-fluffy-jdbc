@@ -1,4 +1,9 @@
+# Compiles
 /target/
 
-# Eclipse
+# IDE
 .settings
+.idea
+
+# Other files to be ignored
+*.log

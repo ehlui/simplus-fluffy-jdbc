@@ -16,6 +16,11 @@ public class PropertiesReader {
 
 	}
 
+	/**
+	 * Sets the properties of {@link PropertiesReader#propertiesDict} whith the key-pair
+	 * values within the 
+	 * @param propFile
+	 */
 	private static void loadProperties(String propFile) {
 		try (InputStream input = App.class.getClassLoader().getResourceAsStream(propFile)) {
 
