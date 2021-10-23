@@ -1,19 +1,18 @@
 package noob.practising.helpers;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-
 import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class PropertiesReaderTest {
 
 	@Test
 	public void testNullGetPropertiesDict() {
 		Object properties = PropertiesReader.getPropertiesDict(null);
-		assertEquals(properties, null);
+		assertNull(properties);
 	}
 
 	// TODO: Test when file does not exists
