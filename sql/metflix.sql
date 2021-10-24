@@ -11,7 +11,7 @@ create table director(
 
 create table movie(
 	id int unsigned auto_increment,
-    title varchar(60),
+    `name` varchar(60),
 	nationality varchar(40),
     production_company varchar(35),
     year_release smallint  unsigned, 
