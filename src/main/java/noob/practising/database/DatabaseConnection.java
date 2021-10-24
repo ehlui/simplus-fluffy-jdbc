@@ -8,6 +8,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Map;
 
+// TODO: If it's not going to be used delete it with its tests
+
 /**
  * Singleton class to manage database connection.
  * <p>
