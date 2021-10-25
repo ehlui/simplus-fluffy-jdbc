@@ -4,6 +4,7 @@
 # IDE
 .settings
 .idea
+*.iml
 
 # Other files to be ignored
 *.log
