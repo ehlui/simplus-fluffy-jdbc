@@ -9,39 +9,42 @@ import static org.junit.Assert.*;
 
 public class PropertiesReaderTest {
 
-	@Test
-	public void testNullGetPropertiesDict() {
-		Object properties = PropertiesReader.getPropertiesDict(null);
-		assertNull(properties);
-	}
+    @Test
+    public void testNullGetPropertiesDict() {
+        assertNull(PropertiesReader.getPropertiesDict(null));
+    }
 
-	// TODO: Test when file does not exists
+    // TODO: Test when file does not exists
 
-	@Test
-	public void testGetWrongPropertiesDict() {
-		Map<String, String> expectedProperties = new HashMap<String, String>();
-		expectedProperties.put("db.user", "user123");
-		expectedProperties.put("db.password", "example123");
-		expectedProperties.put("db.url", "https://tests123.com");
+    @Test
+    public void testGetWrongPropertiesDict() {
+        Map<String, String> expectedProperties = new HashMap<String, String>();
+        expectedProperties.put("db.user", "user123");
+        expectedProperties.put("db.password", "example123");
+        expectedProperties.put("db.url", "https://tests123.com");
 
-		Map<String, String> properties = PropertiesReader.getPropertiesDict("tests.properties");
+        Map<String, String> properties = PropertiesReader.getPropertiesDict("test.properties");
 
-		assertNotEquals(expectedProperties.get("db.user"), properties.get("db.user"));
-		assertNotEquals(expectedProperties.get("db.password"), properties.get("db.user"));
-		assertNotEquals(expectedProperties.get("db.url"), properties.get("db.user"));
+        assertNotEquals(expectedProperties.get("db.user"), properties.get("db.user"));
+        assertNotEquals(expectedProperties.get("db.password"), properties.get("db.user"));
+        assertNotEquals(expectedProperties.get("db.url"), properties.get("db.user"));
 
-	}
+    }
 
-	@Test
-	public void testGetPropertiesDict() {
-		Map<String, String> expectedProperties = new HashMap<String, String>();
-		expectedProperties.put("db.user", "user");
-		expectedProperties.put("db.password", "example");
-		expectedProperties.put("db.url", "https://tests.com");
+    @Test
+    public void testGetPropertiesDict() {
+        Map<String, String> expectedProperties = new HashMap<>();
+        expectedProperties.put("db.user", "test");
+        expectedProperties.put("db.password", "example");
+        expectedProperties.put("db.url", "https://tests.com");
+        expectedProperties.put("db.host", "localhost");
+        expectedProperties.put("db.port", "8788");
+        expectedProperties.put("db.name", "metflix");
+        expectedProperties.put("db.protocol", "jdbc:mysql");
 
-		Map<String, String> properties = PropertiesReader.getPropertiesDict("tests.properties");
+        Map<String, String> properties = PropertiesReader.getPropertiesDict("test.properties");
 
-		assertEquals(properties, expectedProperties);
-	}
+        assertEquals(properties, expectedProperties);
+    }
 
 }
