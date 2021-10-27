@@ -1,18 +1,17 @@
-# Just a simple Java DB connection project
-
+# :whale: Just a simple Java DB connection project :coffee:
 Maven based project with the simplest database connector class in java ``DriverManager``.
 
 
-### Database
+### :information_source: Database
 - It is implemented from a docker container (mysql 8.0) ( at root directory ``metflix.Dockerfile``)
-### App
+### :information_source: App
 - [Data]     It uses DAO's for persisting with repository for simplifying it. 
 - [Connection] For connection there's a builder class for adding settings as properties for the connection.
 - [Tests]      Test are implemented with Junit4 and mockito (for mocking classes)
 
 
 
-## How to deploy
+## :bulb: How to deploy
 
 There are two ways
 
@@ -28,6 +27,6 @@ In case you get some problems with database connection, notice this right after 
 >There is not implemented yet a handler for this (Allow start the app untill database is set)
 
 
-## How to test it
+## :bulb:  How to test it
 
  Just using the ``mvn test`` but in case you have not installed as ``cli`` you'd better need an ide which is automatically by clicks.
